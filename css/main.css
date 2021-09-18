@@ -1,0 +1,351 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:root{
+    --main-color:dodgerblue;
+    --h-color:#ddd;
+}
+
+body{
+font-family: 'Work Sans', sans-serif;
+
+}
+/* start header */
+header{
+    /* position: fixed;
+    z-index: 5; */
+    width: 100%;
+    background-color: white;
+    border-bottom: 2px solid  var(--main-color);
+
+}
+
+.contaner {
+    width: 80%;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+header .contaner img{
+    width: 74px;
+    height: 87px;
+    border-radius: 44%;
+}
+header .contaner .zezo{
+    width: 63px;
+    height: 100px;
+    background: center;
+    border-radius: 10%;
+    background-image: url(../image/Snapchat-406578998.jpg);
+    background-size: cover;
+}
+.head-contain{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.edit {
+    font-size: 60px;
+    color: var(--main-color);
+}
+.logo{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.logo:hover >ul{
+    display: flex;
+}
+.logo:hover>.bar >span{
+    width: 100%;
+}
+.logo .bar{
+    display: flex;
+    width: 35px;
+    flex-wrap: wrap;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    height: 35px;
+    justify-content: flex-end;
+    align-content: space-between;
+    border-radius: 23%;   
+    transition: 1s;
+
+}
+
+.logo >span>span{
+    width: 80%;
+    height: 3px;
+    background-color:var(--main-color);
+    transition: 1s;
+}
+.bar >:nth-child(2) {
+    width: 65%;
+}
+
+.logo ul {
+    background-color: #eee;
+    width: 143px;
+    padding: 0px;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    position: absolute;
+    right: 0%;
+    top: 80px;
+    display: none;
+    z-index: 1;
+}
+.logo ul::after{
+    content: '';
+    border-top: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid #eee;
+    position: absolute;
+    top: -25%;
+    right: -1%;
+
+
+}
+
+.logo ul li {
+    list-style-position: inside;
+    text-decoration: none;
+    width: 100%;
+    list-style-type: none;
+}
+.logo ul li:not(:last-child){
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(0 0 0 / 16%);
+}
+.logo ul li a:hover{
+    padding-left: 20px;
+   
+}
+.logo ul li a{
+    color: black;
+    text-decoration: none;
+    padding: 7px;
+    transition: 1s;
+}
+/*     <!-- main Title --> */
+.main-title {
+    width: 100%;
+    height: calc(100vh - 80px);
+    position: relative;
+    margin-bottom: 10px;
+}
+.main-title img{
+    width: inherit;
+    height: inherit;
+}
+.main-title div{ 
+    color: black;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    padding-left: 15px;
+}
+.main-title h1{
+    margin: 0px;
+    font-size: 45px;
+    font-weight: 800;
+}
+.main-title p{
+    font-weight: 500;
+    font-size: 21px;
+    text-transform: capitalize;
+}
+/* start 3 icon */
+.icon .contaner>div >div{
+text-align: center;  
+margin-bottom: 10px; 
+width: calc(98%  /3);
+}
+@media (min-width:0px) and (max-width:600px){
+
+    .icon .contaner > div>div{
+        width: calc(98%);
+    }
+}
+
+@media (min-width:601px) and (max-width:800px){
+
+    .icon .contaner > div>div{
+        width: calc(98% /2);
+    }
+}
+
+.icon .contaner >div{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.icon .contaner>div>div {
+
+    box-shadow: 11px 10px 20px 0px #f1eaea;
+
+}
+.icon .contaner> div>div i{
+    color: var(--main-color);
+    font-size: 40px;
+}
+/* start serveces */
+
+
+
+.template-bar-h{
+    margin-left: auto;
+    color:var(--h-color);
+    font-size: 100px;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0px;
+}
+@media (min-width:0px) and (max-width:600px){
+
+.template-bar-h{
+    font-size: 50px;
+}
+.template-bar-p{
+    margin-top: -24px;
+}
+}
+.template-bar-p{
+   margin: 0px;
+   margin-top: -24px;
+    text-align: center;
+}
+/*  The real serviece */
+.serv{
+    margin: 10px auto 20px auto;
+    display: grid;
+    grid-template-columns:repeat( auto-fit, minmax(250px,1fr));
+    column-gap: 20px;
+
+}
+.serv .col img{
+    width: 76%;
+    position: relative;
+    height: 279px;
+}
+.serv .col .image{
+    position: relative;
+}
+
+.serv .col .image::before{
+    content: "";
+    width: 37%;
+    height: calc(100% + 5px);
+    background-color: teal;
+    position: absolute;
+    top: -1%;
+    right: 22px;
+
+}
+.serv .col {
+
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+@media (min-width:705px) and (max-width:1040px){
+    .serv .col:last-child{
+        position: relative;
+    left: 50%;
+    }
+}
+.serv .col >div {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.serv .col h3{
+    margin-top: 0px;
+
+}
+.serv .col p{
+    font-weight: 100;
+    line-height: 1.2;
+    width: 100%;
+}
+
+.serv .col i{
+    color: var(--main-color);
+    height: 81px;
+    flex-basis: 60px;
+    font-size: 30px;
+
+}
+/* start portofoluo */
+.portfoluo{
+    background-color: whitesmoke;
+}
+.project .pro img{
+    width: 100%; 
+    height: 70%;
+
+
+}
+.project .pro {
+    padding: 20px;
+}
+.project .pro h3{
+    text-transform: capitalize;
+    text-align: center;
+    color:black;
+}
+.project .pro p{
+    font-weight: 400;
+    color:var(--h-color) ;
+}
+/* start about section  */
+.about .contaner p {
+    line-height: 2;
+    text-align: center;
+}
+/* start conaction section */
+.contact {
+    text-align: center;
+    background-color: teal;
+    padding: 1px;
+    padding-bottom: 0;
+}
+.contact h2{
+    text-align: center;
+    text-decoration: none;
+    margin: 0px;
+    padding-top: 10px;
+}
+.contact h2 a{
+color: var(--h-color);
+}
+.contact .conect-us{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+.contact .conect-us i{
+    color: black;
+    padding-left: 10px;
+    font-size: 30px;
+    height: 30px;
+    width: 40px;
+    align-self: center;
+}
+.contact .conect-us p{
+    font-size: 18px;
+}
+
